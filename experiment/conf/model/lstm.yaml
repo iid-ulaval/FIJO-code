@@ -1,0 +1,6 @@
+_target_: src.model.lstm_classifier.LstmClassifier
+input_size: 300
+hidden_size: 300
+num_lstm_layers: 1
+bidirectional: True
+padding_value: -32

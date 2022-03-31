@@ -1,0 +1,12 @@
+defaults:
+  - data: default
+  - embedding: fasttext
+  - model: camembert
+  - training/hyperparams/default
+  - training/logs/local/default
+  - training/logs/logger/wandb
+  - _self_
+
+hydra:
+  run:
+    dir: ./outputs/${training.logs.logger.group_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
