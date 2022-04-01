@@ -1,9 +1,28 @@
 # CCF-dataset
-Code used to generate basic result for published CCF dataset
+Here is our code repo to reproduce the basic results of the article 
+[“FIJO”: a French Insurance Soft Skill Detection Dataset](URL).
 
-After installing of python environment with requirements.txt:
-1. Copy data in experiment/data
-2. Execute script `init_ccf.py` to download fasttext and CamemBERT pretrained models
-3. Put fasttext embeddings in experiment/embedding
-4. Logging needs Weight&Biases account
-5. in experiment/ launch with `python3 -m src.main`
+## Steps
+
+1. Install Python dependencies uses by our codes using the following command
+
+    ```bash
+    pip install -Ur requirements.txt
+    ```
+2. Download our dataset using the following command
+
+    ```bash
+    python3 download_dataset
+    ```
+or by downloading it manually [here](URL) and unzipping it `experiment/data` directory.
+
+3. Execute the following command 
+    ```bash
+    python3 init_other_dependencies.py
+    ```
+to download NLTK, FastText and CamemBERT models dependancies.
+
+4. Execute the following command to generate our results
+    ```bash
+    python3 -m src.main
+    ```
