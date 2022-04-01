@@ -2,7 +2,7 @@ reproduce-stats: stats-requirements
 	cd stats; python3 stats.py
 
 stats-requirements:
-	pip3 install stats-requirements.txt
+	pip3 install -r stats-requirements.txt
 
 #######################################################################################################################################
 
@@ -29,7 +29,7 @@ reproduce-camembertUnrozenWarmup: experiment-requirements
 		training.hyperparams.num_epochs=20 training.hyperparams.lr_warmup=True training.logs.logger.group_name="camembertUnfrozenWarmup"
 
 experiment-requirements:
-	pip3 install requirements.txt
+	pip3 install -r requirements.txt
 	mkdir experiment/embedding
 	cd experiment/embedding
 	python3 -c "import fasttext.util; fasttext.util.download_model('fr', if_exists='ignore')"
