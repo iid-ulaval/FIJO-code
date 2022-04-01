@@ -1,17 +1,16 @@
 import os
-from random import shuffle
-from time import time
 from functools import partial
+from time import time
 from typing import Callable, List
 
 import torch
-from torch.optim import Adam
 from poutyne.framework import Experiment, EarlyStopping, ReduceLROnPlateau
+from torch.optim import Adam
 
-from ..data import Dataset, DataSplitter
-from ..data import DataloaderFactory
-from ..metrics import loss, accuracy
 from .callbacks import TransformerLrSchedule
+from ..data import DataloaderFactory
+from ..data import Dataset, DataSplitter
+from ..metrics import loss, accuracy
 
 
 def train_model(train_device: torch.device,

@@ -2,15 +2,14 @@ import os
 from random import shuffle
 
 import hydra
-import pandas as pd
 from hydra.utils import get_original_cwd, instantiate
-from torch import device, cuda
-from poutyne.utils import set_seeds
 from omegaconf import OmegaConf
+from poutyne.utils import set_seeds
+from torch import device, cuda
 
-from .model import CamembertClassifier, LstmClassifier
-from .data.embedding import FasttextVectorizer, CamembertTokenizer
 from .data.collator import EmbeddingCollator, TokenCollator
+from .data.embedding import FasttextVectorizer, CamembertTokenizer
+from .model import CamembertClassifier, LstmClassifier
 from .training import train_model
 from .training.callbacks import WandbLogger
 from .utils import prepare_raw_data
@@ -35,7 +34,7 @@ def main(conf):
             "train_data_subset_sizes"]
 
         for subset_size in ([i for i in subset_sizes]
-                            if len(subset_sizes) > 0 else [None]):
+        if len(subset_sizes) > 0 else [None]):
             set_seeds(seed)
 
             model = instantiate(conf["model"], output_size=len(tags_to_idx))
