@@ -13,7 +13,7 @@ nltk.download('punkt')
 spacy.cli.download("fr_core_news_md")
 
 fasttext.util.download_model('fr', if_exists='ignore')
-shutil.move("cc.fr.300.bin", "./experiment/embedding")
+shutil.move("cc.fr.300.bin", os.path.join("./", "experiment", "embedding"))
 os.remove("cc.fr.300.bin.gz")
 
 print("Init of other dependencies done.")
