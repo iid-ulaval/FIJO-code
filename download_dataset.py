@@ -8,7 +8,9 @@ download_out_file_path = os.path.join(".", "experiment", "data", "data.zip")
 wget.download(url, out=download_out_file_path)
 
 
-extract_out_file_path = os.path.join("./", "experiment", "data", "fijo.json")
+extract_out_file_path = os.path.join("./", "experiment", "data")
 with zipfile.ZipFile(download_out_file_path) as zip_file:
     zip_file.extractall(extract_out_file_path)
     print("\nExtracted all")
+
+os.remove(download_out_file_path)
