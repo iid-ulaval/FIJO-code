@@ -32,4 +32,4 @@ experiment-requirements:
 	pip3 install -r requirements.txt
 	mkdir -p experiment/embedding
 	cd experiment/embedding;\
-		 python3 -c "import fasttext.util; fasttext.util.download_model('fr', if_exists='ignore')"
+		python3 -c "import fasttext.util; fasttext.util.download_model('fr', if_exists='ignore')"
