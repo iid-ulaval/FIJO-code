@@ -62,17 +62,23 @@ def main(conf):
 
             dict_conf["training"]["hyperparams"]["seed"] = seed
 
-            logger = WandbLogger(
-                conf["training"]["logs"]["logger"]["projet_name"],
-                conf["training"]["logs"]["logger"]["group_name"], dict_conf)
+            callbacks = None
+            if conf["training"]["logs"]["logger"]["logging"]:
+
+                logger = WandbLogger(
+                    conf["training"]["logs"]["logger"]["projet_name"],
+                    conf["training"]["logs"]["logger"]["group_name"], dict_conf)
+
+                callbacks = [logger]
+
 
             train_model(train_device=train_device,
                         data=data,
                         model=model,
                         collate_fn=collator.collate_batch,
                         train_subset_size=subset_size,
-                        additional_training_callbacks=[logger],
-                        additional_test_callbacks=[logger],
+                        additional_training_callbacks=callbacks,
+                        additional_test_callbacks=callbacks,
                         **conf["training"]["hyperparams"],
                         **conf["training"]["logs"]["local"],
                         current_seed=seed,
