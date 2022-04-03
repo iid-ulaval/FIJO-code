@@ -1,5 +1,5 @@
 _target_: src.model.camembert_classifier.CamembertClassifier
-freeze_camembert: False
+freeze_camembert: ???
 attention_probs_dropout_prob: 0.1
 bos_token_id: 5
 eos_token_id: 6
