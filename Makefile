@@ -33,7 +33,7 @@ reproduce-camembertUnfrozen: experiment-requirements
 
 reproduce-camembertUnfrozenWarmup: experiment-requirements
 	cd experiment; \
-		HYDRA_FULL_ERROR=1 python3 -m src.main model=camembert model.freeze_camembert=False training.hyperparams.device=$(device) training.hyperparams.initial_learning_rate=0.00002 \
+		HYDRA_FULL_ERROR=1 python3 -m src.main model=camembert model.freeze_camembert=False training.hyperparams.train_device_id=$(device) training.hyperparams.initial_learning_rate=0.00002 \
 		training.hyperparams.num_epochs=20 training.hyperparams.lr_warmup=True training.logs.logger.group_name="camembertUnfrozenWarmup"
 
 experiment-requirements:
