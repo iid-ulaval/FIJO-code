@@ -152,7 +152,4 @@ dmypy.json
 #Hydra
 outputs/
 
-experiment/embedding/
-
-data/
 
