@@ -1,28 +1,49 @@
 # CCF-dataset
-Here is our code repo to reproduce the basic results of the article 
+Here is our code repository to reproduce the basic results of the article 
 [“FIJO”: a French Insurance Soft Skill Detection Dataset](URL).
 
+The following details the steps necessary to fetch our dataset and reproduce our results.
+Since each step might require multiple commands and/or command line arguments, we have put
+a Makefile in place to ease the reproductibility experience.
 ## Steps
 
-1. Install Python dependencies uses by our codes using the following command
-
+1. Download our dataset with the following command :
     ```bash
-    pip install -Ur requirements.txt
+    make download-dataset
     ```
-2. Download our dataset using the following command
 
-    ```bash
-    python3 download_dataset
-    ```
-or by downloading it manually [here](URL) and unzipping it `experiment/data` directory.
+    or by downloading it manually [here](URL) and unzipping it `data/` directory
+    at the root of the repository.
 
-3. Execute the following command 
-    ```bash
-    python3 init_other_dependencies.py
-    ```
-to download NLTK, FastText and CamemBERT models dependancies.
+2. One the dataset is downloaded, you can reproduce our dataset statistics as well as the results for each of our models in one simple command :
 
-4. Execute the following command to generate our results
-    ```bash
-    python3 -m src.main
-    ```
+    - To reproduce dataset stats, run the following command :
+         ```bash
+        make reproduce-stats
+        ``` 
+    - To reproduce our bi-LSTM model results, run : 
+        ```bash
+        make reproduce-biLstm [device=0] [local_logging=False] [remote_logging=False]
+        ``` 
+    - To reproduce our CamemBERT frozen model results, run : 
+        ```bash
+        make reproduce-camembertFrozen [device=0] [local_logging=False] [remote_logging=False]
+        ``` 
+    - To reproduce our CamemBERT unfrozen model results, run : 
+        ```bash
+        make reproduce-camembertUnfrozen [device=0] [local_logging=False] [remote_logging=False]
+        ``` 
+    - To reproduce our CamemBERT unfrozen warmup model results, run : 
+        ```bash
+        make reproduce-camembertUnfrozenWarmup [device=0] [local_logging=False [remote_logging=False]
+        ```
+
+    N.B: The last four commands include three optional arguments:
+
+    - *device*: indicates which GPU device to use, if any. DEFAULT: 0
+    - *local_logging*: boolean flag indicating whether or not to log model weights and metrics locally. Bare in mind that the CamemBERT based models have quite a high memory footprint. DEFAULT: False
+    - *remote_logging*: boolean flag indicating whether or not to log model  metrics remotely using Weights & Biases. If *True*, you must be [logged to a Weights & Biases account locally](https://docs.wandb.ai/quickstart). DEFAULT: False
+
+The installation of all the dependencies is handled automatically.
+
+If you wish to run the python/pip commands manually, or if you're encountering problems with **make**, you can check out the commented [Makefile](https://github.com/iid-ulaval/FIJO-code/blob/main/Makefile).
