@@ -46,4 +46,4 @@ a Makefile in place to ease the reproductibility experience.
 
 The installation of all the dependencies is handled automatically.
 
-If you wish to run the python/pip commands manually, or if you're encountering problems with **make**, you can check out the commented [Makefile](https://github.com/iid-ulaval/FIJO-code/blob/main/Makefile).
+If you wish to run the python/pip commands manually, or if you're encountering problems with **make**, you can check out the annotated [Makefile](https://github.com/iid-ulaval/FIJO-code/blob/main/Makefile).
