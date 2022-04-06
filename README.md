@@ -15,7 +15,7 @@ a Makefile in place to ease the reproductibility experience.
     or by downloading it manually [here](URL) and unzipping it `data/` directory
     at the root of the repository.
 
-2. One the dataset is downloaded, you can reproduce our dataset statistics as well as the results for each of our models in one simple command :
+2. Once the dataset is downloaded, you can reproduce our dataset statistics as well as the results for each of our models in one simple command :
 
     - To reproduce dataset stats, run the following command :
          ```bash
