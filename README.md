@@ -41,7 +41,7 @@ a Makefile in place to ease the reproductibility experience.
     N.B: The last four commands include three optional arguments:
 
     - *device*: indicates which GPU device to use, if any. DEFAULT: 0
-    - *local_logging*: boolean flag indicating whether or not to log model weights and metrics locally. Bare in mind that the CamemBERT based models have quite a high memory footprint. DEFAULT: False
+    - *local_logging*: boolean flag indicating whether or not to log model weights and metrics locally. Bear in mind that the CamemBERT based models have quite a high memory footprint. DEFAULT: False
     - *remote_logging*: boolean flag indicating whether or not to log model  metrics remotely using Weights & Biases. If *True*, you must be [logged to a Weights & Biases account locally](https://docs.wandb.ai/quickstart). DEFAULT: False
 
 The installation of all the dependencies is handled automatically.
