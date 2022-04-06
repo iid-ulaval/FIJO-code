@@ -35,7 +35,7 @@ a Makefile in place to ease the reproductibility experience.
         ``` 
     - To reproduce our CamemBERT unfrozen warmup model results, run : 
         ```bash
-        make reproduce-camembertUnfrozenWarmup [device=0] [local_logging=False [remote_logging=False]
+        make reproduce-camembertUnfrozenWarmup [device=0] [local_logging=False] [remote_logging=False]
         ```
 
     N.B: The last four commands include three optional arguments:
