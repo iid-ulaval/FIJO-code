@@ -12,7 +12,7 @@ a Makefile in place to ease the reproductibility experience.
     make download-dataset
     ```
 
-    or by downloading it manually [here](URL) and unzipping it `data/` directory
+    or by downloading it manually [here](https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=doi:10.5683/SP3/CHUEJM) and unzipping it `data/` directory
     at the root of the repository.
 
 2. One the dataset is downloaded, you can reproduce our dataset statistics as well as the results for each of our models in one simple command :
