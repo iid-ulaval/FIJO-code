@@ -15,7 +15,7 @@ a Makefile in place to ease the reproductibility experience.
     or by downloading it manually [here](https://dataverse.scholarsportal.info/dataset.xhtml?persistentId=doi:10.5683/SP3/CHUEJM) and unzipping it `data/` directory
     at the root of the repository.
 
-2. One the dataset is downloaded, you can reproduce our dataset statistics as well as the results for each of our models in one simple command :
+2. Once the dataset is downloaded, you can reproduce our dataset statistics as well as the results for each of our models in one simple command :
 
     - To reproduce dataset stats, run the following command :
          ```bash
@@ -35,13 +35,13 @@ a Makefile in place to ease the reproductibility experience.
         ``` 
     - To reproduce our CamemBERT unfrozen warmup model results, run : 
         ```bash
-        make reproduce-camembertUnfrozenWarmup [device=0] [local_logging=False [remote_logging=False]
+        make reproduce-camembertUnfrozenWarmup [device=0] [local_logging=False] [remote_logging=False]
         ```
 
     N.B: The last four commands include three optional arguments:
 
     - *device*: indicates which GPU device to use, if any. DEFAULT: 0
-    - *local_logging*: boolean flag indicating whether or not to log model weights and metrics locally. Bare in mind that the CamemBERT based models have quite a high memory footprint. DEFAULT: False
+    - *local_logging*: boolean flag indicating whether or not to log model weights and metrics locally. Bear in mind that the CamemBERT based models have quite a high memory footprint. DEFAULT: False
     - *remote_logging*: boolean flag indicating whether or not to log model  metrics remotely using Weights & Biases. If *True*, you must be [logged to a Weights & Biases account locally](https://docs.wandb.ai/quickstart). DEFAULT: False
 
 The installation of all the dependencies is handled automatically.
