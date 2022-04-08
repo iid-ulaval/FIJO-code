@@ -3,7 +3,12 @@ import os
 import wget
 import zipfile
 
-url = 'https://golang.org/dl/go1.17.3.windows-amd64.zip'
+SERVER="dataverse.scholarsportal.info"
+PERSISTENT_ID="doi:10.5683/SP3/CHUEJM"
+VERSION=1.0
+
+url = f"http://{SERVER}/api/access/dataset/:persistentId/versions/{VERSION}?persistentId={PERSISTENT_ID}"
+
 download_out_file_path = os.path.join(".", "data", "data.zip")
 wget.download(url, out=download_out_file_path)
 
