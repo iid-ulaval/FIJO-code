@@ -40,10 +40,22 @@ a Makefile in place to ease the reproductibility experience.
 
     N.B: The last four commands include three optional arguments:
 
-    - *device*: indicates which GPU device to use, if any. DEFAULT: 0
-    - *local_logging*: boolean flag indicating whether or not to log model weights and metrics locally. Bear in mind that the CamemBERT based models have quite a high memory footprint. DEFAULT: False
-    - *remote_logging*: boolean flag indicating whether or not to log model  metrics remotely using Weights & Biases. If *True*, you must be [logged to a Weights & Biases account locally](https://docs.wandb.ai/quickstart). DEFAULT: False
+    - `device`: indicates which GPU device to use, if any. By default `0`.
+    - `local_logging`: boolean flag indicating whether or not to log model weights and metrics locally. Bear in mind that the CamemBERT based models have quite a high memory footprint. By defaut `False`.
+    - `remote_logging`: boolean flag indicating whether or not to log model  metrics remotely using Weights & Biases. If *True*, you must be [logged to a Weights & Biases account locally](https://docs.wandb.ai/quickstart). By default `False`.
 
 The installation of all the dependencies is handled automatically.
 
 If you wish to run the python/pip commands manually, or if you're encountering problems with **make**, you can check out the annotated [Makefile](https://github.com/iid-ulaval/FIJO-code/blob/main/Makefile).
+
+## Cite this article
+
+```
+  @article{
+  title = {{"FIJO": a French Insurance Soft Skill Detection Dataset}},
+  author = {Beauchemin, David and Laumonier, Julien and Le Ster, Yvan and Yassine, Marouane},
+  journal = {...},
+  publisher = {...},
+  year = {2022},
+  }
+```
