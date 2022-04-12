@@ -1,6 +1,6 @@
 # CCF-dataset
 Here is our code repository to reproduce the basic results of the article 
-[“FIJO”: a French Insurance Soft Skill Detection Dataset](URL).
+[“FIJO”: a French Insurance Soft Skill Detection Dataset](https://arxiv.org/abs/2204.05208).
 
 The following details the steps necessary to fetch our dataset and reproduce our results.
 Since each step might require multiple commands and/or command line arguments, we have put
@@ -54,8 +54,7 @@ If you wish to run the python/pip commands manually, or if you're encountering p
   @article{
   title = {{"FIJO": a French Insurance Soft Skill Detection Dataset}},
   author = {Beauchemin, David and Laumonier, Julien and Le Ster, Yvan and Yassine, Marouane},
-  journal = {...},
-  publisher = {...},
-  year = {2022},
-  }
+  year={2022},
+  eprint={arXiv: 2204.05208}
+}
 ```
